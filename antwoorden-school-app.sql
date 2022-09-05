@@ -17,3 +17,9 @@ SELECT naam, vaknaam, periode FROM student
 JOIN deelname on deelname.id = student.id
 JOIN vak ON vak.code = deelname.vak
 ORDER BY naam, periode;
+
+--opdracht 4--
+SELECT vak.vaknaam, AVG(deelname.cijfer) FROM deelname
+JOIN vak on vak.code = deelname.vak
+JOIN student ON student.id = deelname.id
+GROUP by student.naam;
