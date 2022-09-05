@@ -11,3 +11,9 @@ SELECT naam AS voornaam, studie.studie, plaats.plaatsnaam AS woonplaats FROM stu
 JOIN studie on studie.code = student.studie
 JOIN plaats ON plaats.code = student.woonplaats
 WHERE studie.plaats <> "Den Haag";
+
+--opdracht 3--
+SELECT naam, vaknaam, periode FROM student
+JOIN deelname on deelname.id = student.id
+JOIN vak ON vak.code = deelname.vak
+ORDER BY naam, periode;
